@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Kitchen Products - ShopNow</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">ShopNow</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-links">
+                <a href="../shop.html">Shop</a>
+                <a href="../cart.html"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="../login.html" class="login-btn">Login</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../index.html#categories">Categories</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="current-category">Home & Kitchen</span>
+        </div>
+    </div>
+
+    <!-- Category Banner -->
+    <section class="category-banner home">
+        <div class="banner-content">
+            <h1>Home & Kitchen Products</h1>
+            <p>Transform your living space with our quality home essentials</p>
+        </div>
+    </section>
+
+    <!-- Category Content -->
+    <section class="category-section">
+        <div class="category-container">
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar">
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="300" value="300" id="price-slider">
+                        <div class="price-inputs">
+                            <input type="number" id="min-price" placeholder="Min">
+                            <input type="number" id="max-price" placeholder="Max">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Rating</h3>
+                    <div class="rating-filters">
+                        <label>
+                            <input type="checkbox" value="5"> 5 Stars
+                        </label>
+                        <label>
+                            <input type="checkbox" value="4"> 4 Stars & Up
+                        </label>
+                        <label>
+                            <input type="checkbox" value="3"> 3 Stars & Up
+                        </label>
+                    </div>
+                </div>
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="products-container">
+                <div class="products-header">
+                    <div class="results-count">
+                        <span>0</span> Products Found
+                    </div>
+                    <div class="sort-options">
+                        <select id="sort-by">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Top Rated</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Categories Button -->
+    <div class="back-to-categories">
+        <a href="../index.html#categories" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i>
+            Back to Categories
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted online shopping destination for quality products.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../shop.html">Shop</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShopNow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/category.js"></script>
+</body>
+</html> 

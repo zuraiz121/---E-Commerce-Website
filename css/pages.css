@@ -1,0 +1,392 @@
+/* ==========================================================================
+   Common Page Styles (Lines 1-20)
+   ========================================================================== */
+.legal-section,
+.returns-section,
+.careers-hero,
+.about-hero {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.legal-section h1,
+.returns-section h1,
+.careers-hero h1,
+.about-hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.legal-section p,
+.returns-section p,
+.careers-hero p,
+.about-hero p {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   About Page Hero Section (Lines 23-35)
+   ========================================================================== */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.about-hero h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   About Page Content Sections (Lines 38-65)
+   ========================================================================== */
+.about-section,
+.mission-section,
+.team-section,
+.achievements-section {
+    padding: 5rem 0;
+}
+
+.story-content,
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-content h2,
+.mission-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.story-content p,
+.mission-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Values Grid Section (Lines 68-95)
+   ========================================================================== */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: #EB5E28;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Team Section (Lines 98-130)
+   ========================================================================== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .position {
+    color: #EB5E28;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-member .bio {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Achievements Section (Lines 133-160)
+   ========================================================================== */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-card {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-card i {
+    font-size: 2.5rem;
+    color: #EB5E28;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Legal Pages Content (Lines 163-185)
+   ========================================================================== */
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.legal-content section {
+    margin-bottom: 3rem;
+}
+
+.legal-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content li {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Returns Page Styles (Lines 188-215)
+   ========================================================================== */
+.policy-section {
+    margin-bottom: 4rem;
+}
+
+.policy-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #EB5E28;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   Careers Page Styles (Lines 218-342)
+   ========================================================================== */
+.careers-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/careers-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.careers-hero h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.careers-hero p {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.position-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.position-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.position-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.position-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.position-details i {
+    color: #EB5E28;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #EB5E28;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #d44d1f;
+}
+
+/* ==========================================================================
+   Responsive Design (Lines 345-387)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .legal-section h1,
+    .returns-section h1,
+    .careers-hero h1,
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero,
+    .careers-hero {
+        padding: 6rem 0;
+    }
+
+    .values-grid,
+    .team-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .legal-section h1,
+    .returns-section h1,
+    .careers-hero h1,
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-hero p,
+    .careers-hero p {
+        font-size: 1.1rem;
+    }
+
+    .value-card,
+    .team-member,
+    .achievement-card {
+        padding: 1.5rem;
+    }
+} 

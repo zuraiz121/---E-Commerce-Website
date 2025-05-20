@@ -1,0 +1,158 @@
+<!-- =====================================================================
+     electronics.html - Electronics category page for ShopNow e-commerce website
+     Features: global header/footer, hero, shop section with filters and product grid,
+     and custom styles. All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - ShopNow</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ================= Global Header (Dynamic) ================= -->
+    <header id="global-header"></header>
+
+    <!-- ================= Category Hero Section ================= -->
+    <section class="category-hero">
+        <div class="hero-content">
+            <h1>Electronics</h1>
+            <p>Discover the latest gadgets and tech innovations</p>
+        </div>
+    </section>
+
+    <!-- ================= Shop Section ================= -->
+    <section class="shop-section">
+        <div class="shop-container">
+            <!-- Filters Sidebar -->
+            <div class="filters-sidebar">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="active">All Electronics</a></li>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="2000" value="1000">
+                        <div class="price-inputs">
+                            <input type="number" value="0" min="0">
+                            <span>to</span>
+                            <input type="number" value="2000" max="2000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Brand</h3>
+                    <div class="brand-filters">
+                        <label><input type="checkbox"> Apple</label>
+                        <label><input type="checkbox"> Samsung</label>
+                        <label><input type="checkbox"> Sony</label>
+                        <label><input type="checkbox"> LG</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Rating</h3>
+                    <div class="rating-filters">
+                        <label><input type="checkbox"> 4 Stars & Up</label>
+                        <label><input type="checkbox"> 3 Stars & Up</label>
+                        <label><input type="checkbox"> 2 Stars & Up</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Container -->
+            <div class="products-container">
+                <div class="products-header">
+                    <h2>All Electronics</h2>
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=60" alt="MacBook Pro">
+                        <div class="product-info">
+                            <h3>MacBook Pro 2024</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(128)</span>
+                            </div>
+                            <p class="price">$1,299.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=60" alt="iPhone 15">
+                        <div class="product-info">
+                            <h3>iPhone 15 Pro</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(256)</span>
+                            </div>
+                            <p class="price">$999.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=60" alt="Samsung TV">
+                        <div class="product-info">
+                            <h3>Samsung 4K Smart TV</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span>(89)</span>
+                            </div>
+                            <p class="price">$799.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&auto=format&fit=crop&q=60" alt="AirPods Pro">
+                        <div class="product-info">
+                            <h3>AirPods Pro</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(512)</span>
+                            </div>
+                            <p class="price">$249.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Global Footer (Dynamic) ================= -->
+    <footer id="global-footer"></footer>
+
+    <!-- ================= Scripts ================= -->
+    <script src="../js/main.js"></script>
+    <script src="../js/global-components.js"></script>
+</body>
+</html> 

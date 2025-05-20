@@ -1,0 +1,543 @@
+<!-- =====================================================================
+     blog.html - Blog page for ShopNow e-commerce website
+     Features: global header/footer, hero, featured/latest posts, sidebar
+     widgets (search, categories, popular posts, newsletter), and custom styles.
+     All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ShopNow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ================= Global Header (Dynamic) ================= -->
+    <header id="global-header"></header>
+
+    <main class="blog-page">
+        <div class="container">
+            <!-- ================= Hero Section ================= -->
+            <section class="blog-hero">
+                <h1 class="page-title">Our Blog</h1>
+                <p class="hero-subtitle">Latest news, trends, and insights from the world of e-commerce</p>
+            </section>
+
+            <div class="blog-layout">
+                <div class="blog-main">
+                    <!-- ================= Featured Posts Section ================= -->
+                    <section class="featured-posts">
+                        <h2>Featured Articles</h2>
+                        <div class="featured-grid">
+                            <!-- Each featured-card represents a featured article -->
+                            <article class="featured-card">
+                                <div class="card-image">
+                                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="E-commerce trends and analytics dashboard" loading="lazy">
+                                    <span class="category">Trends</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>The Future of E-commerce: Trends to Watch in 2024</h3>
+                                    <p class="meta">
+                                        <span class="author"><i class="fas fa-user"></i> John Smith</span>
+                                        <span class="date"><i class="fas fa-calendar"></i> March 15, 2024</span>
+                                    </p>
+                                    <p class="excerpt">Discover the latest trends shaping the future of online shopping, from AI-powered personalization to sustainable practices.</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="featured-card">
+                                <div class="card-image">
+                                    <img src="https://images.pexels.com/photos/4065158/pexels-photo-4065158.webp?auto=compress&w=1200" alt="Mobile shopping on smartphone" loading="lazy">
+                                    <span class="category">Marketing</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Social Commerce: The New Frontier of Online Shopping</h3>
+                                    <p class="meta">
+                                        <span class="author"><i class="fas fa-user"></i> Sarah Johnson</span>
+                                        <span class="date"><i class="fas fa-calendar"></i> March 12, 2024</span>
+                                    </p>
+                                    <p class="excerpt">How social media platforms are revolutionizing the way we shop online and what it means for businesses.</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- ================= Latest Posts Section ================= -->
+                    <section class="latest-posts">
+                        <h2>Latest Articles</h2>
+                        <div class="posts-grid">
+                            <!-- Each post-card represents a blog article -->
+                            <article class="post-card">
+                                <div class="card-image">
+                                    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b1a48?auto=format&fit=crop&w=1200&q=80" alt="Customer experience in online shopping" loading="lazy">
+                                    <span class="category">Technology</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Mobile Shopping: Optimizing Your Store for Mobile Users</h3>
+                                    <p class="meta">
+                                        <span class="author"><i class="fas fa-user"></i> Mike Brown</span>
+                                        <span class="date"><i class="fas fa-calendar"></i> March 10, 2024</span>
+                                    </p>
+                                    <p class="excerpt">Essential tips and best practices for creating a seamless mobile shopping experience.</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="post-card">
+                                <div class="card-image">
+                                    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b1a48?auto=format&fit=crop&w=1200&q=80" alt="Customer experience in online shopping" loading="lazy">
+                                    <span class="category">Customer Service</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Enhancing Customer Experience in E-commerce</h3>
+                                    <p class="meta">
+                                        <span class="author"><i class="fas fa-user"></i> Emily Davis</span>
+                                        <span class="date"><i class="fas fa-calendar"></i> March 8, 2024</span>
+                                    </p>
+                                    <p class="excerpt">Strategies for creating memorable shopping experiences that keep customers coming back.</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="post-card">
+                                <div class="card-image">
+                                    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b1a48?auto=format&fit=crop&w=1200&q=80" alt="Customer experience in online shopping" loading="lazy">
+                                    <span class="category">Sustainability</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Sustainable E-commerce: Building a Greener Future</h3>
+                                    <p class="meta">
+                                        <span class="author"><i class="fas fa-user"></i> David Wilson</span>
+                                        <span class="date"><i class="fas fa-calendar"></i> March 5, 2024</span>
+                                    </p>
+                                    <p class="excerpt">How e-commerce businesses can implement sustainable practices and reduce their environmental impact.</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="post-card">
+                                <div class="card-image">
+                                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="E-commerce trends and analytics dashboard" loading="lazy">
+                                    <span class="category">Marketing</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Digital Marketing Strategies for E-commerce Success</h3>
+                                    <p class="meta">
+                                        <span class="author"><i class="fas fa-user"></i> Lisa Chen</span>
+                                        <span class="date"><i class="fas fa-calendar"></i> March 3, 2024</span>
+                                    </p>
+                                    <p class="excerpt">Effective digital marketing techniques to drive traffic and increase sales in your online store.</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- ================= Pagination ================= -->
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <span>...</span>
+                        <a href="#">Next</a>
+                    </div>
+                </div>
+
+                <!-- ================= Sidebar ================= -->
+                <aside class="blog-sidebar">
+                    <!-- ================= Search Widget ================= -->
+                    <section class="search-widget">
+                        <h3>Search</h3>
+                        <form class="search-form">
+                            <input type="text" placeholder="Search articles...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </section>
+
+                    <!-- ================= Categories Widget ================= -->
+                    <section class="categories-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Technology <span>(12)</span></a></li>
+                            <li><a href="#">Marketing <span>(8)</span></a></li>
+                            <li><a href="#">Customer Service <span>(6)</span></a></li>
+                            <li><a href="#">Sustainability <span>(4)</span></a></li>
+                            <li><a href="#">Trends <span>(10)</span></a></li>
+                        </ul>
+                    </section>
+
+                    <!-- ================= Popular Posts Widget ================= -->
+                    <section class="popular-posts-widget">
+                        <h3>Popular Posts</h3>
+                        <div class="popular-posts">
+                            <!-- Each popular-post represents a sidebar article -->
+                            <article class="popular-post">
+                                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="E-commerce trends and analytics dashboard" loading="lazy">
+                                <div class="post-info">
+                                    <h4><a href="#">The Rise of Voice Commerce</a></h4>
+                                    <span class="date">March 1, 2024</span>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="E-commerce trends and analytics dashboard" loading="lazy">
+                                <div class="post-info">
+                                    <h4><a href="#">AI in E-commerce: What's Next?</a></h4>
+                                    <span class="date">February 28, 2024</span>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="E-commerce trends and analytics dashboard" loading="lazy">
+                                <div class="post-info">
+                                    <h4><a href="#">Omnichannel Retailing Guide</a></h4>
+                                    <span class="date">February 25, 2024</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- ================= Newsletter Widget ================= -->
+                    <section class="newsletter-widget">
+                        <h3>Subscribe to Our Newsletter</h3>
+                        <p>Get the latest articles and updates delivered to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= Global Footer (Dynamic) ================= -->
+    <footer id="global-footer"></footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/global-components.js"></script>
+
+    <style>
+        .blog-page {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .blog-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .featured-posts,
+        .latest-posts {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .featured-card,
+        .post-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-card:hover,
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta i {
+            margin-right: 0.5rem;
+        }
+
+        .excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--accent-dark);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .pagination a,
+        .pagination span {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .pagination a:hover,
+        .pagination a.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Sidebar Styles */
+        .blog-sidebar section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .blog-sidebar h3 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-form button {
+            padding: 0.8rem 1.2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-form button:hover {
+            background: var(--accent-dark);
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .category-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .category-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            transition: color 0.3s ease;
+        }
+
+        .category-list a:hover {
+            color: var(--accent);
+        }
+
+        .popular-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .popular-post {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .popular-post img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .post-info h4 {
+            margin: 0 0 0.5rem;
+            font-size: 1rem;
+        }
+
+        .post-info a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .post-info a:hover {
+            color: var(--accent);
+        }
+
+        .post-info .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent-dark);
+        }
+
+        @media (max-width: 1024px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-sidebar {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-page {
+                padding: 2rem 0;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .featured-grid,
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image {
+                height: 250px;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,81 @@
+<!-- =====================================================================
+     cart.html - Shopping cart page for Modern E-commerce website
+     Features: global header/footer, cart items, order summary, checkout,
+     login modal, and dynamic content. All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Modern E-commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ================= Global Header (Dynamic) ================= -->
+    <header id="global-header"></header>
+
+    <!-- ================= Cart Section ================= -->
+    <section class="cart-section">
+        <div class="cart-container">
+            <h1>Shopping Cart</h1>
+            <div class="cart-content">
+                <!-- ================= Cart Items ================= -->
+                <div class="cart-items">
+                    <!-- Items will be loaded dynamically -->
+                </div>
+
+                <!-- ================= Cart Summary ================= -->
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span class="shipping">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax</span>
+                        <span class="tax">$0.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="proceedToCheckout()">
+                        Proceed to Checkout
+                    </button>
+                    <a href="shop.html" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i>
+                        Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Global Footer (Dynamic) ================= -->
+    <footer id="global-footer"></footer>
+
+    <!-- ================= Login Modal ================= -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login Required</h2>
+            <p>Please login to complete your purchase.</p>
+            <div class="modal-buttons">
+                <a href="login.html" class="btn-primary">Login</a>
+                <a href="signup.html" class="btn-secondary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/global-components.js"></script>
+</body>
+</html> 

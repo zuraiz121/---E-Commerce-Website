@@ -1,0 +1,160 @@
+<!-- =====================================================================
+     fashion.html - Fashion category page for ShopNow e-commerce website
+     Features: global header/footer, hero, shop section with filters and product grid,
+     and custom styles. All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion - ShopNow</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ================= Global Header (Dynamic) ================= -->
+    <header id="global-header"></header>
+
+    <!-- ================= Category Hero Section ================= -->
+    <section class="category-hero">
+        <div class="hero-content">
+            <h1>Fashion</h1>
+            <p>Discover the latest trends in clothing and accessories</p>
+        </div>
+    </section>
+
+    <!-- ================= Shop Section ================= -->
+    <section class="shop-section">
+        <div class="shop-container">
+            <!-- Filters Sidebar -->
+            <div class="filters-sidebar">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="active">All Fashion</a></li>
+                        <li><a href="#">Women's Clothing</a></li>
+                        <li><a href="#">Men's Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Footwear</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="500" value="250">
+                        <div class="price-inputs">
+                            <input type="number" value="0" min="0">
+                            <span>to</span>
+                            <input type="number" value="500" max="500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Brand</h3>
+                    <div class="brand-filters">
+                        <label><input type="checkbox"> Nike</label>
+                        <label><input type="checkbox"> Adidas</label>
+                        <label><input type="checkbox"> Zara</label>
+                        <label><input type="checkbox"> H&M</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Size</h3>
+                    <div class="size-filters">
+                        <label><input type="checkbox"> XS</label>
+                        <label><input type="checkbox"> S</label>
+                        <label><input type="checkbox"> M</label>
+                        <label><input type="checkbox"> L</label>
+                        <label><input type="checkbox"> XL</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Container -->
+            <div class="products-container">
+                <div class="products-header">
+                    <h2>All Fashion</h2>
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&auto=format&fit=crop&q=60" alt="Summer Dress">
+                        <div class="product-info">
+                            <h3>Summer Floral Dress</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(89)</span>
+                            </div>
+                            <p class="price">$79.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&auto=format&fit=crop&q=60" alt="Men's Suit">
+                        <div class="product-info">
+                            <h3>Classic Fit Suit</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span>(45)</span>
+                            </div>
+                            <p class="price">$299.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=60" alt="Running Shoes">
+                        <div class="product-info">
+                            <h3>Premium Running Shoes</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(156)</span>
+                            </div>
+                            <p class="price">$129.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop&q=60" alt="Leather Bag">
+                        <div class="product-info">
+                            <h3>Designer Leather Bag</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(78)</span>
+                            </div>
+                            <p class="price">$199.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Global Footer (Dynamic) ================= -->
+    <footer id="global-footer"></footer>
+
+    <!-- ================= Scripts ================= -->
+    <script src="../js/main.js"></script>
+    <script src="../js/global-components.js"></script>
+</body>
+</html> 

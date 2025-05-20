@@ -1,0 +1,503 @@
+<!-- =====================================================================
+     track-order.html - Order tracking page for ShopNow E-commerce website
+     Features: order tracking form, order summary, timeline, shipping address,
+     help section, error handling, dynamic header/footer, and responsive design.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order - ShopNow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ================= Header Section ================= -->
+    <header id="global-header"></header>
+
+    <!-- ================= Track Order Content ================= -->
+    <main class="track-order-page">
+        <div class="container">
+            <h1 class="page-title">Track Your Order</h1>
+            
+            <div class="tracking-container">
+                <div class="tracking-form">
+                    <h2>Enter Order Details</h2>
+                    <form id="trackingForm">
+                        <div class="form-group">
+                            <label for="orderNumber">Order Number</label>
+                            <input type="text" id="orderNumber" name="orderNumber" required 
+                                   placeholder="Enter your order number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="Enter the email used for the order">
+                        </div>
+                        <button type="submit" class="track-button">
+                            <i class="fas fa-search"></i>
+                            Track Order
+                        </button>
+                    </form>
+                </div>
+
+                <div class="tracking-info" id="trackingInfo" style="display: none;">
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="order-details">
+                            <div class="detail-item">
+                                <span class="label">Order Number:</span>
+                                <span class="value" id="displayOrderNumber"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Order Date:</span>
+                                <span class="value" id="orderDate"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Status:</span>
+                                <span class="value status" id="orderStatus"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Estimated Delivery:</span>
+                                <span class="value" id="estimatedDelivery"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-timeline">
+                        <h2>Tracking Timeline</h2>
+                        <div class="timeline" id="trackingTimeline">
+                            <!-- Timeline items will be dynamically added here -->
+                        </div>
+                    </div>
+
+                    <div class="shipping-address">
+                        <h2>Shipping Address</h2>
+                        <div class="address-details" id="shippingAddress">
+                            <!-- Address details will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tracking-error" id="trackingError" style="display: none;">
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Order Not Found</h3>
+                        <p>We couldn't find an order matching the provided details. Please check your order number and email address and try again.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracking-help">
+                <h2>Need Help?</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Where to Find Your Order Number</h3>
+                        <p>Your order number can be found in your order confirmation email or in your account's order history.</p>
+                    </div>
+                    <div class="help-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Tracking Updates</h3>
+                        <p>Tracking information is updated in real-time. If you don't see updates, please allow 24 hours for the system to reflect the latest status.</p>
+                    </div>
+                    <div class="help-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Contact Support</h3>
+                        <p>If you're having trouble tracking your order, please contact our customer support team for assistance.</p>
+                        <a href="contact.html" class="contact-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= Footer Section ================= -->
+    <footer id="global-footer"></footer>
+
+    <!-- ================= Scripts ================= -->
+    <script src="js/main.js"></script>
+    <script src="js/global-components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const trackingForm = document.getElementById('trackingForm');
+            const trackingInfo = document.getElementById('trackingInfo');
+            const trackingError = document.getElementById('trackingError');
+
+            trackingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const orderNumber = document.getElementById('orderNumber').value;
+                const email = document.getElementById('email').value;
+
+                // Simulate API call to get tracking information
+                // In a real application, this would be an actual API call
+                setTimeout(() => {
+                    // For demo purposes, show tracking info if order number contains "123"
+                    if (orderNumber.includes('123')) {
+                        displayTrackingInfo({
+                            orderNumber: orderNumber,
+                            orderDate: 'March 15, 2024',
+                            status: 'In Transit',
+                            estimatedDelivery: 'March 18, 2024',
+                            timeline: [
+                                {
+                                    date: 'March 15, 2024 10:30 AM',
+                                    status: 'Order Shipped',
+                                    location: 'Distribution Center'
+                                },
+                                {
+                                    date: 'March 15, 2024 8:15 AM',
+                                    status: 'Order Processed',
+                                    location: 'Warehouse'
+                                },
+                                {
+                                    date: 'March 14, 2024 2:45 PM',
+                                    status: 'Order Confirmed',
+                                    location: 'Online Store'
+                                }
+                            ],
+                            shippingAddress: {
+                                name: 'John Doe',
+                                street: '123 Main Street',
+                                city: 'New York',
+                                state: 'NY',
+                                zip: '10001',
+                                country: 'United States'
+                            }
+                        });
+                    } else {
+                        showTrackingError();
+                    }
+                }, 1000);
+            });
+
+            function displayTrackingInfo(data) {
+                // Update order summary
+                document.getElementById('displayOrderNumber').textContent = data.orderNumber;
+                document.getElementById('orderDate').textContent = data.orderDate;
+                document.getElementById('orderStatus').textContent = data.status;
+                document.getElementById('estimatedDelivery').textContent = data.estimatedDelivery;
+
+                // Update timeline
+                const timeline = document.getElementById('trackingTimeline');
+                timeline.innerHTML = '';
+                data.timeline.forEach(item => {
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = 'timeline-item';
+                    timelineItem.innerHTML = `
+                        <div class="timeline-date">${item.date}</div>
+                        <div class="timeline-content">
+                            <h4>${item.status}</h4>
+                            <p>${item.location}</p>
+                        </div>
+                    `;
+                    timeline.appendChild(timelineItem);
+                });
+
+                // Update shipping address
+                const address = document.getElementById('shippingAddress');
+                address.innerHTML = `
+                    <p>${data.shippingAddress.name}</p>
+                    <p>${data.shippingAddress.street}</p>
+                    <p>${data.shippingAddress.city}, ${data.shippingAddress.state} ${data.shippingAddress.zip}</p>
+                    <p>${data.shippingAddress.country}</p>
+                `;
+
+                // Show tracking info, hide error
+                trackingInfo.style.display = 'block';
+                trackingError.style.display = 'none';
+            }
+
+            function showTrackingError() {
+                trackingInfo.style.display = 'none';
+                trackingError.style.display = 'block';
+            }
+        });
+    </script>
+
+    <style>
+        .track-order-page {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            font-size: 2.5rem;
+        }
+
+        .tracking-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .tracking-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tracking-form h2 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(235, 94, 40, 0.2);
+        }
+
+        .track-button {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .track-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .tracking-info {
+            margin-top: 2rem;
+        }
+
+        .order-summary, .tracking-timeline, .shipping-address {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .order-summary h2, .tracking-timeline h2, .shipping-address h2 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .order-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .detail-item .label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .detail-item .value {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .detail-item .value.status {
+            color: var(--accent);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 2px solid white;
+        }
+
+        .timeline-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .address-details p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tracking-error {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-message {
+            color: var(--error-color);
+        }
+
+        .error-message i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .error-message h3 {
+            margin-bottom: 1rem;
+        }
+
+        .tracking-help {
+            margin-top: 3rem;
+        }
+
+        .tracking-help h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            font-size: 1.8rem;
+        }
+
+        .help-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .help-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .help-item i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .help-item h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .help-item p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background-color: var(--accent-hover);
+        }
+
+        @media (max-width: 768px) {
+            .track-order-page {
+                padding: 2rem 0;
+            }
+
+            .page-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .tracking-container {
+                padding: 1.5rem;
+            }
+
+            .order-details {
+                grid-template-columns: 1fr;
+            }
+
+            .help-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html> 

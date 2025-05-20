@@ -1,0 +1,414 @@
+<!-- Footer Component -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Shop Categories</h3>
+            <ul class="footer-links">
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="home-living.html">Home & Living</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Customer Service</h3>
+            <ul class="footer-links">
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="shipping.html">Shipping Policy</a></li>
+                <li><a href="returns.html">Returns & Refunds</a></li>
+                <li><a href="track-order.html">Track Order</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Company Info</h3>
+            <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Pinterest">
+                    <i class="fab fa-pinterest" aria-hidden="true"></i>
+                    <span class="sr-only">Pinterest</span>
+                </a>
+            </div>
+            <div class="newsletter-signup">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form class="footer-newsletter" id="footerNewsletterForm" novalidate>
+                    <div class="form-group">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input type="email" id="newsletter-email" placeholder="Enter your email" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-describedby="newsletter-error">
+                        <div id="newsletter-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Subscribe</span>
+                        <span class="loading-spinner" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2024</span> ShopNow. All rights reserved.</p>
+    </div>
+</footer>
+
+<style>
+    /* Footer Styles */
+    .footer {
+        background-color: #403D39;
+        color: #FFFCF2;
+        padding: 4rem 2rem 1rem;
+        margin-top: 4rem;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .footer-section h3 {
+        color: #FFFCF2;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+        color: #FFFCF2;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        position: relative;
+        padding-bottom: 2px;
+    }
+
+    .footer-links a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #EB5E28;
+        transition: width 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #EB5E28;
+    }
+
+    .footer-links a:hover::after {
+        width: 100%;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .social-links a {
+        color: #FFFCF2;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-links a:hover {
+        color: #FFFCF2;
+        background-color: #EB5E28;
+        transform: translateY(-3px);
+    }
+
+    .newsletter-signup {
+        margin-top: 2rem;
+    }
+
+    .newsletter-signup h4 {
+        color: #FFFCF2;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .footer-newsletter input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #FFFCF2;
+    }
+
+    .footer-newsletter input:focus {
+        outline: none;
+        border-color: #EB5E28;
+        box-shadow: 0 0 0 2px rgba(235, 94, 40, 0.2);
+    }
+
+    .footer-newsletter input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-newsletter input:invalid {
+        border-color: #ff4444;
+    }
+
+    .error-message {
+        color: #ff4444;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: none;
+    }
+
+    .footer-newsletter input:invalid+.error-message {
+        display: block;
+    }
+
+    .footer-newsletter button {
+        padding: 0.8rem;
+        background-color: #EB5E28;
+        color: #FFFCF2;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        min-height: 40px;
+    }
+
+    .footer-newsletter button:hover {
+        background-color: #D54E18;
+    }
+
+    .footer-newsletter button:disabled {
+        background-color: #666;
+        cursor: not-allowed;
+    }
+
+    .loading-spinner {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #FFFCF2;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    .footer-newsletter button.loading .button-text {
+        visibility: hidden;
+    }
+
+    .footer-newsletter button.loading .loading-spinner {
+        display: block;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-bottom p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+    }
+
+    /* Responsive Footer */
+    @media screen and (max-width: 1024px) {
+        .footer-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .footer {
+            padding: 3rem 1.5rem 1rem;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .social-links {
+            justify-content: center;
+        }
+
+        .footer-newsletter {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .footer {
+            padding: 2rem 1rem 1rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+        }
+
+        .footer-links a {
+            font-size: 0.95rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Update copyright year
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+
+        // Update footer links based on current page location
+        const footerLinks = document.querySelectorAll('.footer-links a');
+        const isRootPage = window.location.pathname.split('/').length <= 2;
+
+        footerLinks.forEach(link => {
+            const rootPath = link.getAttribute('data-root-path');
+            if (rootPath) {
+                link.href = isRootPage ? rootPath : '../' + rootPath;
+            }
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('footerNewsletterForm');
+        if (newsletterForm) {
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            const errorMessage = document.getElementById('newsletter-error');
+            const submitButton = newsletterForm.querySelector('button[type="submit"]');
+
+            newsletterForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                if (!this.checkValidity()) {
+                    errorMessage.textContent = 'Please enter a valid email address';
+                    return;
+                }
+
+                const email = emailInput.value;
+
+                try {
+                    submitButton.disabled = true;
+                    submitButton.classList.add('loading');
+                    errorMessage.textContent = '';
+
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+
+                    // Here you would typically send this to your backend
+                    console.log('Newsletter signup:', email);
+
+                    // Show success message
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                } catch (error) {
+                    errorMessage.textContent = 'An error occurred. Please try again.';
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('loading');
+                }
+            });
+
+            // Real-time validation
+            emailInput.addEventListener('input', function () {
+                if (this.validity.valid) {
+                    errorMessage.textContent = '';
+                } else if (this.validity.typeMismatch) {
+                    errorMessage.textContent = 'Please enter a valid email address';
+                }
+            });
+        }
+    });
+</script>

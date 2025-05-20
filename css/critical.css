@@ -1,0 +1,74 @@
+/* Critical CSS - Above the fold styles */
+:root {
+  --primary-color: #007bff;
+  --text-color: #333;
+  --bg-color: #fff;
+  --animation-timing: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+/* Header */
+#global-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hero section */
+.hero-section {
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+/* Mission section */
+.mission-section {
+  padding: 60px 0;
+}
+
+/* Animation classes needed above fold */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s var(--animation-timing),
+              transform 0.4s var(--animation-timing);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+} 

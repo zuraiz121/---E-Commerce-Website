@@ -1,0 +1,135 @@
+/* Base Animation Styles */
+:root {
+  --animation-timing: cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-duration-micro: 200ms;
+  --animation-duration-content: 400ms;
+  --animation-duration-transition: 300ms;
+}
+
+/* Page Transition */
+.page-transition {
+  opacity: 0;
+  transition: opacity var(--animation-duration-transition) var(--animation-timing);
+}
+
+.page-transition.active {
+  opacity: 1;
+}
+
+/* Scroll Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity var(--animation-duration-content) var(--animation-timing),
+              transform var(--animation-duration-content) var(--animation-timing);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity var(--animation-duration-content) var(--animation-timing),
+              transform var(--animation-duration-content) var(--animation-timing);
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Heading Underline Animation */
+.heading-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width var(--animation-duration-content) var(--animation-timing);
+}
+
+.heading-underline.visible::after {
+  width: 100%;
+}
+
+/* Button Animations */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--animation-duration-micro) var(--animation-timing);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity var(--animation-duration-micro) var(--animation-timing);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  opacity: 0.1;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Form Field Animations */
+.form-group {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all var(--animation-duration-micro) var(--animation-timing);
+  pointer-events: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: 0;
+  font-size: 0.85em;
+  background-color: white;
+  padding: 0 4px;
+}
+
+/* Success/Error Icons */
+.form-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all var(--animation-duration-micro) var(--animation-timing);
+}
+
+.form-icon.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} 

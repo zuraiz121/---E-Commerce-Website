@@ -1,0 +1,239 @@
+<!-- =====================================================================
+     about.html - About page for ShopNow e-commerce website
+     Features: global header/footer, mission, story, values, team, impact,
+     call-to-action, and custom styles. All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about ShopNow's mission, story, values, and leadership team. Discover how we're revolutionizing e-commerce with innovation and customer-centric design.">
+    <meta property="og:title" content="About Us - ShopNow">
+    <meta property="og:description" content="Learn about ShopNow's mission, story, values, and leadership team. Discover how we're revolutionizing e-commerce with innovation and customer-centric design.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/critical.css" as="style">
+    <link rel="preload" href="js/animations.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.pexels.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/critical.css">
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/pages.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/about.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/pages.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/animations.css">
+    </noscript>
+    
+    <!-- Deferred Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Deferred Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>About Us - ShopNow</title>
+</head>
+<body>
+    <!-- ================= Global Header (Dynamic) ================= -->
+    <header id="global-header"></header>
+
+    <main class="about-page page-transition">
+        <div class="container">
+            <!-- ================= Hero Section ================= -->
+            <section class="hero-section fade-up">
+                <h1 class="page-title heading-underline">About ShopNow</h1>
+                <p class="hero-subtitle">Building the future of e-commerce, one innovation at a time</p>
+            </section>
+
+            <!-- ================= Mission Section ================= -->
+            <section class="mission-section fade-up">
+                <div class="mission-content">
+                    <h2 class="heading-underline">Our Mission</h2>
+                    <p>At ShopNow, we're on a mission to revolutionize the online shopping experience. We believe that e-commerce should be seamless, enjoyable, and accessible to everyone. Through innovative technology and customer-centric design, we're creating a platform that makes shopping online as natural as shopping in person.</p>
+                </div>
+                <div class="mission-stats">
+                    <div class="stat-item fade-up">
+                        <span class="stat-number">10M+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item fade-up">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-item fade-up">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Story Section ================= -->
+            <section class="story-section">
+                <h2 class="heading-underline">Our Story</h2>
+                <div class="story-content">
+                    <div class="story-image fade-up">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
+                             srcset="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80 400w,
+                                     https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80 800w,
+                                     https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80 1200w"
+                             sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 1200px"
+                             alt="Professional business team in a modern office, collaborating on a project" 
+                             loading="lazy"
+                             width="800"
+                             height="600">
+                    </div>
+                    <div class="story-text slide-in">
+                        <p>Founded in 2020, ShopNow began with a simple idea: make online shopping better. What started as a small team of passionate individuals has grown into a global e-commerce platform serving millions of customers worldwide.</p>
+                        <p>Our journey has been marked by continuous innovation, customer feedback, and a commitment to excellence. Today, we're proud to be at the forefront of e-commerce technology, offering a seamless shopping experience that customers love.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Values Section ================= -->
+            <section class="values-section">
+                <h2 class="heading-underline">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card fade-up">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <h3>Customer First</h3>
+                        <p>We put our customers at the center of everything we do, ensuring their needs and satisfaction drive our decisions.</p>
+                    </div>
+                    <div class="value-card fade-up">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <h3>Innovation</h3>
+                        <p>We constantly push boundaries and embrace new technologies to improve the shopping experience.</p>
+                    </div>
+                    <div class="value-card fade-up">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                        <h3>Integrity</h3>
+                        <p>We conduct our business with honesty, transparency, and a strong ethical foundation.</p>
+                    </div>
+                    <div class="value-card fade-up">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <h3>Collaboration</h3>
+                        <p>We believe in the power of teamwork and diverse perspectives to achieve great results.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Team Section ================= -->
+            <section class="team-section">
+                <h2 class="heading-underline">Meet Our Leadership Team</h2>
+                <div class="team-grid">
+                    <!-- Each team-member represents a leader -->
+                    <div class="team-member fade-up">
+                        <div class="member-image team-portrait">
+                            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.webp?auto=compress&fit=facearea&w=400&h=400&q=80" 
+                                 alt="John Smith, CEO of ShopNow" 
+                                 loading="lazy"
+                                 width="400"
+                                 height="400">
+                        </div>
+                        <h3>John Smith</h3>
+                        <p class="position">Chief Executive Officer</p>
+                        <p class="bio">With over 15 years of experience in e-commerce, John leads our company with vision and passion.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/johnsmith" aria-label="John Smith's LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/johnsmith" aria-label="John Smith's Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member fade-up">
+                        <div class="member-image team-portrait">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400&q=80" alt="Sarah Johnson, CTO of ShopNow, professional business portrait (female)" loading="lazy">
+                        </div>
+                        <h3>Sarah Johnson</h3>
+                        <p class="position">Chief Technology Officer</p>
+                        <p class="bio">Sarah drives our technological innovation, ensuring we stay at the cutting edge of e-commerce.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/sarahjohnson" aria-label="Sarah Johnson's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/sarahjohnson" aria-label="Sarah Johnson's Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member fade-up">
+                        <div class="member-image team-portrait">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.webp?auto=compress&fit=facearea&w=400&h=400&q=80" alt="Michael Chen, COO of ShopNow, professional business portrait (male)" loading="lazy">
+                        </div>
+                        <h3>Michael Chen</h3>
+                        <p class="position">Chief Operations Officer</p>
+                        <p class="bio">Michael oversees our operations, ensuring smooth and efficient service delivery.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/michaelchen" aria-label="Michael Chen's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/michaelchen" aria-label="Michael Chen's Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member fade-up">
+                        <div class="member-image team-portrait">
+                            <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=facearea&w=400&h=400&q=80" alt="Emily Davis, CMO of ShopNow, professional business portrait (female)" loading="lazy">
+                        </div>
+                        <h3>Emily Davis</h3>
+                        <p class="position">Chief Marketing Officer</p>
+                        <p class="bio">Emily leads our marketing efforts, building strong connections with our customers.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/emilydavis" aria-label="Emily Davis's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/emilydavis" aria-label="Emily Davis's Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Impact Section ================= -->
+            <section class="impact-section">
+                <h2 class="heading-underline">Our Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-card fade-up">
+                        <i class="fas fa-leaf" aria-hidden="true"></i>
+                        <h3>Sustainability</h3>
+                        <p>We're committed to reducing our environmental footprint through eco-friendly practices.</p>
+                    </div>
+                    <div class="impact-card fade-up">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                        <h3>Community</h3>
+                        <p>We actively support local communities through various initiatives and partnerships.</p>
+                    </div>
+                    <div class="impact-card fade-up">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <h3>Education</h3>
+                        <p>We invest in education and skill development programs for our employees and community.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Call-to-Action Section ================= -->
+            <section class="cta-section fade-up">
+                <h2 class="heading-underline">Join Our Journey</h2>
+                <p>Be part of our mission to transform e-commerce. Whether you're a customer, partner, or potential team member, we'd love to hear from you.</p>
+                <div class="cta-buttons">
+                    <a href="careers.html" class="cta-button btn">Join Our Team</a>
+                    <a href="contact.html" class="cta-button secondary btn">Contact Us</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ================= Global Footer (Dynamic) ================= -->
+    <footer id="global-footer"></footer>
+
+    <!-- Deferred JavaScript -->
+    <script src="js/main.js" defer></script>
+    <script src="js/global-components.js" defer></script>
+    <script src="js/animations.js" defer></script>
+</body>
+</html> 

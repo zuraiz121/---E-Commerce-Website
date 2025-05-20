@@ -1,0 +1,34 @@
+<!-- =====================================================================
+     error.html - 404 error page for ShopNow e-commerce website
+     Features: error message, icon, and a link to return to the homepage.
+     All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - ShopNow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { display: flex; align-items: center; justify-content: center; height: 100vh; background: var(--light-bg, #f8f9fa); margin: 0; }
+        .error-container { text-align: center; padding: 3rem 2rem; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+        .error-icon { font-size: 5rem; color: var(--accent, #e74c3c); margin-bottom: 1rem; }
+        .error-title { font-size: 2.5rem; color: var(--text-primary, #222); margin-bottom: 1rem; }
+        .error-message { color: var(--text-secondary, #555); margin-bottom: 2rem; }
+        .home-link { display: inline-block; padding: 0.75rem 2rem; background: var(--accent, #e74c3c); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .home-link:hover { background: #c0392b; }
+    </style>
+</head>
+<body>
+    <!-- ================= Error Container ================= -->
+    <div class="error-container">
+        <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="error-title">404 - Page Not Found</div>
+        <div class="error-message">Sorry, the page you are looking for does not exist or has been moved.</div>
+        <a href="index.html" class="home-link">Go to Homepage</a>
+    </div>
+</body>
+</html> 

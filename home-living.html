@@ -1,0 +1,239 @@
+<!-- =====================================================================
+     home-living.html - Home & Living category page for ShopNow e-commerce website
+     Features: global header/footer, hero, shop section with filters and product grid,
+     and custom styles. All major sections are marked.
+     ===================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Living - ShopNow</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ================= Global Header (Dynamic) ================= -->
+    <header id="global-header"></header>
+
+    <!-- ================= Category Hero Section ================= -->
+    <section class="category-hero">
+        <div class="hero-content">
+            <h1>Home & Living</h1>
+            <p>Transform your space with our curated collection</p>
+        </div>
+    </section>
+
+    <!-- ================= Shop Section ================= -->
+    <section class="shop-section">
+        <div class="shop-container">
+            <!-- Filters Sidebar -->
+            <div class="filters-sidebar">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="active">All Home & Living</a></li>
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Decor</a></li>
+                        <li><a href="#">Kitchen</a></li>
+                        <li><a href="#">Bath</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="1000" value="500">
+                        <div class="price-inputs">
+                            <input type="number" value="0" min="0">
+                            <span>to</span>
+                            <input type="number" value="1000" max="1000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Style</h3>
+                    <div class="style-filters">
+                        <label><input type="checkbox"> Modern</label>
+                        <label><input type="checkbox"> Traditional</label>
+                        <label><input type="checkbox"> Minimalist</label>
+                        <label><input type="checkbox"> Industrial</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Material</h3>
+                    <div class="material-filters">
+                        <label><input type="checkbox"> Wood</label>
+                        <label><input type="checkbox"> Metal</label>
+                        <label><input type="checkbox"> Glass</label>
+                        <label><input type="checkbox"> Ceramic</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Container -->
+            <div class="products-container">
+                <div class="products-header">
+                    <h2>All Home & Living</h2>
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=60" alt="Modern Sofa">
+                        <div class="product-info">
+                            <h3>Modern Sectional Sofa</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(67)</span>
+                            </div>
+                            <p class="price">$899.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&auto=format&fit=crop&q=60" alt="Table Lamp">
+                        <div class="product-info">
+                            <h3>Ceramic Table Lamp</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span>(42)</span>
+                            </div>
+                            <p class="price">$79.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60" alt="Kitchen Set">
+                        <div class="product-info">
+                            <h3>Stainless Steel Kitchen Set</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(93)</span>
+                            </div>
+                            <p class="price">$149.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&auto=format&fit=crop&q=60" alt="Wall Art">
+                        <div class="product-info">
+                            <h3>Abstract Wall Art</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(58)</span>
+                            </div>
+                            <p class="price">$199.99</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Global Footer (Dynamic) ================= -->
+    <footer id="global-footer"></footer>
+
+    <!-- ================= Scripts ================= -->
+    <script src="../js/main.js"></script>
+    <script src="../js/global-components.js"></script>
+    <script>
+    // Product data for Home & Living page
+    const homeProducts = [
+      {
+        name: "Modern Sectional Sofa",
+        price: 899.99,
+        rating: 5,
+        reviews: 67,
+        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=60",
+        date: "2024-05-01"
+      },
+      {
+        name: "Ceramic Table Lamp",
+        price: 79.99,
+        rating: 4,
+        reviews: 42,
+        image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&auto=format&fit=crop&q=60",
+        date: "2024-04-15"
+      },
+      {
+        name: "Stainless Steel Kitchen Set",
+        price: 149.99,
+        rating: 5,
+        reviews: 93,
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60",
+        date: "2024-03-20"
+      },
+      {
+        name: "Abstract Wall Art",
+        price: 199.99,
+        rating: 5,
+        reviews: 58,
+        image: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&auto=format&fit=crop&q=60",
+        date: "2024-02-10"
+      }
+    ];
+
+    // Render products to the grid
+    function renderHomeProducts(products) {
+      const grid = document.querySelector('.product-grid');
+      grid.innerHTML = products.map(product => `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}" loading="lazy">
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <div class="product-rating">
+              <span class="stars">${'★'.repeat(product.rating)}${'☆'.repeat(5-product.rating)}</span>
+              <span>(${product.reviews})</span>
+            </div>
+            <p class="price">$${product.price.toFixed(2)}</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Initial render
+    renderHomeProducts(homeProducts);
+
+    // Sorting logic
+    const sortSelect = document.querySelector('.sort-options select');
+    sortSelect.addEventListener('change', function() {
+      let sorted = [...homeProducts];
+      switch (this.value) {
+        case 'Price: Low to High':
+          sorted.sort((a, b) => a.price - b.price);
+          break;
+        case 'Price: High to Low':
+          sorted.sort((a, b) => b.price - a.price);
+          break;
+        case 'Newest First':
+          sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
+          break;
+        default:
+          // Featured: original order
+          sorted = [...homeProducts];
+      }
+      renderHomeProducts(sorted);
+    });
+    </script>
+</body>
+</html> 
